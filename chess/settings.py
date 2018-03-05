@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'teacher.urls'
+ROOT_URLCONF = 'chess.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'teacher.wsgi.application'
+WSGI_APPLICATION = 'chess.wsgi.application'
 
 
 # Database
