@@ -22,9 +22,9 @@ class NewVisitorTest(unittest.TestCase):
         self.assertIn('Chess Teacher', self.browser.title)
 
         # Johno sees the options to create an account or play a game
-        header_text = self.browser.find_element_by_tag_name('h2').text
-        self.assertIn('Create an account', header_text)
-        self.assertIn('play a game', header_text)
+        headings = self.browser.find_elements_by_tag_name('h2')
+        self.assertIn('Create an account', [heading.text for heading in headings])
+        self.assertIn('play a game', [heading.text for heading in headings])
         # Johno chooses to play a game
         play_link = self.browser.find_element_by_link_text('play')
         play_link.click()
